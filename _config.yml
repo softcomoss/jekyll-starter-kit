@@ -1,0 +1,46 @@
+# Site settings
+title:          Site title
+shortname:      Site
+company:        Softcom LTD
+description:    Site description goes here
+url:            ''
+# url:            'http://app.eyowo.com'
+charset:        'UTF-8'
+timezone:       Africa/Lagos
+
+
+# Included Plugins
+plugins:
+  - jekyll-sitemap
+  - jekyll-seo-tag
+  - jekyll-feed
+  - jekyll-paginate
+
+
+# Build settings
+markdown:       kramdown
+permalink:      pretty
+
+# Include folders
+include:
+  - _pages
+
+
+# Handling Sass
+sass:
+  sass_dir: _sass
+  style: compressed
+
+
+# Exclude from processing.
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
+  - vendor/bundle/
+  - vendor/cache/
+  - vendor/gems/
+  - vendor/ruby/
+  - package.json
+  - dev
+  - .gitignore
