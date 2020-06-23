@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="en">
+
+{% include shell/head.html %}
+
+<body style="padding: 0">
+    <h1 class="sr">{{ site.title }}</h1>
+    <div class="site-wrapper">
+            <img style="height: 100%; width: 100%; object-fit: cover; position: absolute; z-index: -1;" src="{{ site.url }}/uploads/page404.png" alt="brand-logo"
+            class="">
+        <main class="site-main full-page flx-center-center py-50">
+            
+                
+
+            <section class="maxwidth-xsm w-100p wrapper--x-5">
+                <div class="tx-c mb-45">
+                    <a class="d-ibl" href="">
+                        <img class="w-125" src="{{ site.url }}/uploads/eyowo-logo.svg" alt="brand-logo"
+                            class="eyowo-logo">
+                    </a>
+                </div>
+                <!-- {{ content }} -->
+
+                {% include 404.html %}
+            </section>
+            
+        </main>
+
+    </div>
+    
+    {% include shell/foot.html %}
+</body>
+
+</html>

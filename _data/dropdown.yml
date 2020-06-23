@@ -1,0 +1,7 @@
+profile_links:
+  - name: Profile
+    slug: /profile
+    icon-id: profile-icon
+  - name: Logout
+    slug: /logout
+    icon-id: logout-icon

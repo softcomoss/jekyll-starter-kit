@@ -1,0 +1,55 @@
+// 
+    // Buttons
+
+    // @package eyowo
+    // @author  Tonye Dickson <psybug>
+    // @version 1.0.0
+
+//
+
+.btn
+    display:                    inline-flex
+    align-items:                center
+    text-align:                 center
+    justify-content:            center
+    padding:                    0 2rem
+    white-space:                nowrap
+    height:                     36px
+    font-size:                  1.4rem
+    border:                     1px solid transparent
+    border-radius:              8px
+    font-family:                $contentfont
+    @media #{ $smalldown}
+        height:                 46px
+        font-size:              1.6rem
+    &--standard
+        @extend .btn
+        background-color:       $primarycolor
+        color:                  #ffffff
+        height:                 50px
+        &:hover
+            color: #ffffff
+            background-color:       darken($primarycolor, 20%)
+    &--secondary
+        @extend .btn
+        background-color:       $secondarycolor
+        color:                  $primarycolor
+        &:hover
+            background-color:       $primarycolor
+            color:                  #ffffff
+    &--lite
+        @extend .btn
+        background-color:       #ffffff
+        color:                  $primarycolor
+        &:hover
+            color:                  $primarycolor
+            background-color:       lighten( $primarycolor, 50% )
+
+    // &--premium  
+    &:hover
+        box-shadow:             0 2px 2px 0 rgba( 0, 0, 0,0.14 ), 0 1px 5px 0 rgba( 0, 0, 0, 0.12 ), 0 3px 1px -2px rgba( 0, 0, 0, 0.2 )
+
+button.active
+    border-bottom:              1.5px solid $primarycolor
+button:hover
+    cursor:                     pointer

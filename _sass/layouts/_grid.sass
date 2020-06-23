@@ -1,0 +1,302 @@
+// 
+    // Grid
+
+    // @package hdy
+    // @author  Rahman Are <i@kb.life>
+
+// Widths
+.width-100-pc
+    width:              100%
+.maxwidth-xl
+    max-width:          $maxwidth-xl
+.maxwidth-lt
+    max-width:          $maxwidth-lt
+.maxwidth-tb
+    max-width:          $maxwidth-tb
+.maxwidth-sm
+    max-width:          $maxwidth-sm
+.maxwidth-xs
+    max-width:          $maxwidth-xs
+.maxwidth-xsm
+    max-width:          420px
+.maxwidth-750
+    max-width:          750px
+.maxwidth-850
+    max-width:          850px
+.maxwidth-350
+    max-width:          350px
+.maxwidth-400
+    max-width:          400px
+.maxwidth-470
+    max-width:          470px
+
+
+.w-100p
+    width:              100%
+    @media #{ $mediumdown }
+        &--large
+            width:              100%
+    @media #{ $smalldown }
+        &--small
+            width:              100%
+.w-125
+    width: 125px
+.w-35
+    width: 35px
+.w-50p
+    width:              50%
+    @media #{ $mediumdown }
+        &--large
+            width:              50%
+
+.w-530
+    width: 530px
+.w-330
+    width: 330px
+.w-850
+    width: 850px
+
+.m-h-135
+    min-height: 135px
+.m-h-150
+    min-height: 150px
+.m-h-385
+    min-height: 385px
+.m-h-450
+    min-height: 450px
+.m-h-60
+    min-height: 60px
+
+.h-220
+    height: 220px
+.h-100p
+    height: 100%
+
+
+    
+.grid
+    display:                        grid
+    grid-template-columns:          repeat(12, 1fr)
+    grid-gap:                       $space-sm
+    &.is-multi-col.mostly-2
+        grid-template-columns:      repeat(auto-fill, minmax(314.3px, 1fr))
+        @media #{ $largeup }
+            grid-template-columns:  repeat(auto-fill, minmax(372px, 1fr))
+    &.is-multi-col.mostly-3
+        grid-template-columns:      repeat(auto-fill, minmax(308px, 1fr))
+    &.is-multi-col.mostly-3-with-auto
+        grid-template-columns:      1fr
+        @media #{ $smallup }
+            grid-template-columns:      1fr 1fr
+        @media #{ $largeup }
+            grid-template-columns:      1fr 1fr 1fr auto
+    &.is-multi-col.mostly-4
+        grid-template-columns:      repeat(auto-fill, minmax(200px, 1fr))
+    .col-12
+        grid-column:                1 / 13
+    @media #{ $smallup }
+        .col-6-sm
+            grid-column:            1 / 7
+            &.offset-6-cols-from-left
+                grid-column:        7 /13
+    @media #{ $mediumup }
+        .col-4-md
+            grid-column:            1 / 9
+            &.offset-8-cols-from-left
+                grid-column:        9 /13
+        .col-8-md
+            grid-column:            1 / 9
+
+.grid-2
+    display:                        grid
+    grid-template-columns:          1fr 1fr
+.gg
+    grid-gap:                       30px
+
+.grid-logos
+    display:                        grid
+    grid-gap:                       20px
+    grid-template-columns:          repeat(auto-fill, 110px)
+
+.grid-container
+    display: grid
+    grid-template-columns:          1fr
+    grid-gap:                       10px
+    @media #{ $smallup }
+        display: grid
+        grid-template-columns:          repeat(2, 1fr)
+        grid-gap:                       10px
+        .post
+            min-height:                 180px
+    @media #{ $mediumup }
+        display: grid
+        grid-template-columns:          repeat(3, 1fr)
+        grid-gap:                       10px
+        .post
+            min-height:                 180px
+        .post:nth-child(10n + 1), .post:nth-child(10n + 8)
+            grid-row:                   span 2
+    
+.gallery-container
+    display: grid
+    grid-template-columns:          1fr
+    grid-gap:                       10px
+    @media #{ $smallup }
+        display: grid
+        grid-template-columns:          repeat(2, 1fr)
+        grid-gap:                       10px
+        .post
+            min-height:                 180px
+    @media #{ $mediumup }
+        display: grid
+        grid-template-columns:          repeat(3, 1fr)
+        grid-gap:                       10px
+        .post
+            min-height:                 180px
+        .post:nth-child(10n + 1), .post:nth-child(10n + 8)
+            grid-row:                   span 2
+
+.qr-container
+    display:                        grid
+    grid-gap:                       1rem
+    grid-template-columns:          70% 30%
+
+.flex-grider
+    display: flex
+    flex-wrap: wrap
+    overflow: hidden
+    &>*
+        width: 100%
+    &.col-space-20 > *
+        margin-bottom: 20px
+        &:last-child
+            margin-bottom: 0
+    &.col-space-30 > *
+        margin-bottom: 30px
+        &:last-child
+            margin-bottom: 0
+    &.row-2-space20
+        margin: -10px
+        >*
+            margin: 10px
+            @media #{ $mediumup }
+                width: calc(50% - 20px)
+            @media #{ $smallup }
+                width: calc(50% - 20px)
+        >.w-55p
+            @media #{ $smallup }
+                width: calc(100% - 20px)
+            @media #{ $mediumup }
+                width: calc(55% - 20px)
+        >.w-45p
+            @media #{ $smallup }
+                width: calc(100% - 20px)
+            @media #{ $mediumup }
+                width: calc(45% - 20px)
+    &.row-2-space30
+        margin: -15px
+        >*
+            margin: 15px
+            @media #{ $mediumup }
+                width: calc(50% - 30px)
+            @media #{ $smallup }
+                width: calc(50% - 30px)
+    &.row-2-space30-wide
+        margin: -15px
+        >*
+            margin: 15px
+            @media #{ $mediumup }
+                width: calc(50% - 30px)
+    &.row-2-space25
+        margin: -12.5px
+        >*
+            margin: 12.5px
+            @media #{ $smallup }
+                width: calc(50% - 25px)
+            @media #{ $mediumup }
+                width: calc(50% - 25px)
+        >.w-55p
+            @media #{ $smallup }
+                width: calc(100% - 25px)
+            @media #{ $mediumup }
+                width: calc(55% - 25px)
+        >.w-45p
+            @media #{ $smallup }
+                width: calc(100% - 25px)
+            @media #{ $mediumup }
+                width: calc(45% - 25px)
+
+    &.row-2-space25-wide
+        margin: -12.5px
+        >*
+            margin: 12.5px
+            @media #{ $mediumup }
+                width: calc(50% - 25px)
+            
+    &.row-3-space20
+        margin: -10px
+        >*
+            margin: 10px
+            @media #{ $smallup }
+                width: calc(50% - 20px)
+            @media #{ $mediumup }
+                width: calc(33.3% - 20px)
+            
+    &.row-3-space30
+        margin: -15px
+        >*
+            margin: 15px
+            @media #{ $smallup }
+                width: calc(50% - 30px)
+            @media #{ $mediumup }
+                width: calc(33.3% - 30px)
+            
+    &.row-3-space25
+        margin: -12.5px
+        >*
+            margin: 12.5px
+            @media #{ $smallup }
+                width: calc(50% - 25px)
+            @media #{ $mediumup }
+                width: calc(33.3% - 25px)
+            
+    &.row-3-space20
+        margin: -10px
+        >*
+            margin: 10px
+            @media #{ $mediumup }
+                width: calc(33.3% - 20px)
+            @media #{ $smallup }
+                width: calc(50% - 20px)
+    &.row-4-space30
+        margin: -15px
+        >*
+            margin: 15px
+            @media #{ $mediumup }
+                width: calc(25% - 30px)
+            @media #{ $smallup }
+                width: calc(50% - 30px)
+    &.row-4-space25
+        margin: -12.5px
+        >*
+            margin: 12.5px
+            @media #{ $smallup }
+                width: calc(50% - 25px)
+            @media #{ $mediumup }
+                width: calc(25% - 25px)
+        &.mb-25
+            margin-bottom: 2.5rem
+        &.mb-40
+            margin-bottom: 4rem
+            
+    &.row-4-space20
+        margin: -10px
+        >*
+            margin: 10px
+            @media #{ $smallup }
+                width: calc(50% - 20px)
+            @media #{ $mediumup }
+                width: calc(25% - 20px)
+            
+    
+    

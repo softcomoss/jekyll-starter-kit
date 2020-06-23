@@ -1,0 +1,110 @@
+select
+	-webkit-appearance: none
+	-moz-appearance: none
+	appearance: none
+	padding: 5px
+	height: auto
+
+	
+
+.date-range
+	position: relative
+	&.automatic
+		position: absolute
+		top: 50%
+		right: 25px
+		transform: translateY(-50%)
+		@media #{ $smalldown }
+			top: 100%
+			transform: translateY(15px)
+
+	&__calendar, &__caret
+		position: absolute
+		left: 10px
+		transform: translateY(-50%)
+		top: 50%
+	&__caret
+		left: auto
+		right: 10px
+	&__input
+		padding: 8px 20px 8px 40px
+		background: linear-gradient(0deg, #F6F7F9 0%, #FFFFFF 100%)
+		box-shadow: 0px 1px 1px rgba(22, 29, 37, 0.05), inset 0px 2px 0px rgba(255, 255, 255, 0.05)
+
+.input-caret
+	display: inline-block
+	width: 0
+	height: 0
+	border: 5px solid transparent
+	border-top-color: #3E3F42
+	position: absolute
+	right: 14px
+	bottom: 13px
+	z-index: 2
+
+.input 
+	position: relative
+	z-index: 1
+	display: inline-block
+	width: 100%
+	vertical-align: top
+	.tool
+		position: absolute
+		right: 15px
+		bottom: 15px
+		color: #aaaaaa
+	&__field
+		&:focus 
+			outline: none
+	&__error-message
+	&__with-errors
+	&__with-errors
+		.input__error-message
+	&__label 
+		display: inline-block
+		display: flex
+		align-items: flex-start
+		-webkit-font-smoothing: antialiased
+		-moz-osx-font-smoothing: grayscale
+		-webkit-touch-callout: none
+		-webkit-user-select: none
+		-khtml-user-select: none
+		-moz-user-select: none
+		-ms-user-select: none
+		user-select: none
+
+
+@-webkit-keyframes anim-1 
+	50% 
+		opacity: 0
+		-webkit-transform: translateY(10px)
+		transform: translateY(10px)
+	
+	51% 
+		opacity: 0
+		-webkit-transform: translateY(10px)
+		transform: translateY(10px)
+	
+	100% 
+		opacity: 1
+		-webkit-transform: translateY(0)
+		transform: translateY(0)
+	
+
+
+@keyframes anim-1 
+	50% 
+		opacity: 0
+		-webkit-transform: translateY(10px)
+		transform: translateY(10px)
+	
+	51% 
+		opacity: 0
+		-webkit-transform: translateY(10px)
+		transform: translateY(10px)
+	
+	100% 
+		opacity: 1
+		-webkit-transform: translateY(0)
+		transform: translateY(0)
+
