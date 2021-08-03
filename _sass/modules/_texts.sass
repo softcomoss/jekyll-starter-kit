@@ -1,89 +1,89 @@
 // 
     // Text Decorations
 
-    // @package eyowo
-    // @author  Tonye Dickson <psybug>
-    // @version 1.0.0
-
 // Texts a
 .tx-c
-    text-align:                 center
+    text-align:         center
+.tx-l
+    text-align:         left
 .tx-r
-    text-align:                 right
-
-// Texts 
-.p-font
-    font-family: $contentfont
-    margin: 0
+    text-align:         right
+    
+.underline
+    text-decoration:    underline
 
 
 // Sizes
-.picotext, .f-12
+.picotext
     font-size:                  $font12
-.microtext, .f-16
-    font-size:                  $font16
-.smalltext, .f-18
-    font-size:                  $font18
-.f-21
-    font-size:                  $font21
+.nanotext
+    font-size:          $nanofont
+.microtext
+    font-size:          $microfont
+.smalltext
+    font-size:          $smallfont
 .mediumtext
-    font-size:                  $mediumfont
-.largetext, .f-30
-    font-size:                  $font30
-.nanotext, .f-14
-    font-size:                  $font14
-
-.f-28
-    font-size:                  2.8rem
+    font-size:          $mediumfont
+.largetext
+    font-size:          $largefont
 
 
 // line heights
-.lh-1-h
-    line-height: 1.3rem
-
-.lh-22, .p-content
-    line-height: 2.2rem
-
-.lh-30
-    line-height: 3rem
-
-.lh-25
-    line-height: 25px
-
+.defaultlh
+    line-height:        $defaultlh
+.lh-16
+    line-height:        $lh-16
+.lh-24
+    line-height:        $lh-24
+.lh-26
+    line-height:        $lh-26
+.lh-27
+    line-height:        $lh-27
+.lh-36
+    line-height:        $lh-36
+.lh-40
+    line-height:        $lh-40
+.lh-50
+    line-height:        $lh-50
+.lh-67
+    line-height:        $lh-67
+    
 
 // text underline
 .underline
     text-decoration: underline
 
 
+.small-caps
+    +text-treatment( $smallfont, uppercase, 2px )
+.micro-caps
+    +text-treatment( $microfont, uppercase, 2px )
+.nano-caps
+    +text-treatment( $nanofont, uppercase, 2px )
+.small-nano-caps
+    +text-treatment( $picofont, uppercase, 2px )
 
 
 // Headings
 h1, h2, h3, h4
-    font-weight:                bold
-    margin:                     0
-    font-family:                $headingfont
-    line-height:                normal
-    
-.h1
-    font-size:                  3.2rem
+    font-family:        $headingfont
+    margin-top:         $space-sm
+    margin-bottom:      $space
+    line-height:        $headinglh  
+h1, .h1
+    font-size:          1.72rem
     @media #{ $smallup }
-        font-size:              6.4rem
-
-.h2
-    font-size:                  2.4rem
+        font-size:      1.88rem
+h2, .h2
+    font-size:          1.56rem
     @media #{ $smallup }
-        font-size:              4rem
-
+        font-size:      1.64rem
 h3, .h3
-    font-size:                  1.8rem
+    font-size:          1.32rem
+h4, .h4
+    font-size:          1.24rem
 
-.content p
-    line-height: 24px
 
-.is-all-caps
-    text-transform:             uppercase
-    letter-spacing:             1.5px
 
 .section-title
     padding-bottom:             $space
@@ -92,30 +92,23 @@ h3, .h3
     border-bottom:              $borderline
     margin-bottom:              $space-md
 
+    
 .fw-bold
-    font-weight: bold
+    font-weight:        bold
 .fw-normal
-    font-weight: normal
+    font-weight:        normal
+.fw-light
+    font-weight:        100    
+.ff-light
+    font-family:        $bodyfont
+.ff-regular
+    font-family:        $regularfont
+.ff-bolder
+    font-family:        $bolderfont
+.ff-bold
+    font-family:        $boldfont
 
 
-
-
-// Links
-.sweetgray-links
-    color:                      $sweetgray
-    fill:                       $sweetgray
-    &:active,
-    &:focus,
-    &:hover
-        color:                  $primarycolor
-        fill:                   $primarycolor
-
-.richblack-links
-    color:                      $richblack
-    &:active,
-    &:focus,
-    &:hover
-        color:                  $sweetgray 
 
 .whitesmoke-links
     color:                      $whitesmoke
